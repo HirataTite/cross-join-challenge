@@ -1,0 +1,24 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      show-sql: true
+  datasource:
+    platform: h2
+    initialization-mode: embedded
+    data:
+      - classpath:import-products.sql
+
+logging:
+  level:
+    org:
+      apache:
+        http:
+          wire: debug

@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      show-sql: true
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/store"
+    username: jpatutorial
+    password:
+  flyway:
+    locations: [ "classpath:h2/db/migration" ]
